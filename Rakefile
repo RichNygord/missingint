@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "missingint"
   gem.homepage = "http://github.com/RichNygord/missingint"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Return the missing number in an array sized n containing numbers in range (1..n+1) in linear time with no additional size complexity.}
+  gem.description = %Q{Return the missing number in an array sized n containing numbers in range (1..n+1) in linear time with no additional size complexity.  The method missing_int is added to Array.}
   gem.email = "rvnygord@yahoo.com"
   gem.authors = ["Richard Nygord"]
   # dependencies defined in Gemfile
@@ -42,8 +42,8 @@ end
 
 task :default => :test
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
+require 'rdoc/task'
+RDoc::Task.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
