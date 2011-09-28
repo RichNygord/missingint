@@ -6,8 +6,7 @@
 
 class Array
   def missing_int
-    raise RuntimeError, 'no missing integers for empty Array' if self == []
-    (self.length+1) * (self.length+2) / 2 - self.inject(:+)  # 1+ 2+ ... + n = n(n+1)/2
+    (self.length+1) * (self.length+2) / 2 - self.inject(0, :+)  # 1+ 2+ ... + n = n(n+1)/2
   end
 end
 
